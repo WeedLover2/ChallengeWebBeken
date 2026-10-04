@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Karla } from "next/font/google";
+import { Navbar } from "@/components/layout/navbar";
+import { Footer } from "@/components/layout/footer"
 import "./globals.css";
 
 const karla = Karla({
@@ -20,7 +22,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id" className={karla.variable}>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
