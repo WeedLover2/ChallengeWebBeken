@@ -9,7 +9,7 @@ import Link from "next/link";
 export function Footer() {
     return (
         <footer id="contact" className="bg-brand text-white">
-        <div className="mx-auto grid max-w-[1200px] gap-8 px-6 py-8 md:grid-cols-[4fr_5fr_1fr] md:gap-10 md:py-14">
+        <div className="mx-auto grid max-w-[1200px] items-start gap-8 px-6 py-8 md:grid-cols-[auto_auto_auto] md:justify-between md:gap-x-10 md:py-14">
             <div>
             <Image
                 src={logobekenputih}
@@ -19,7 +19,7 @@ export function Footer() {
             <p className="mt-1 text-sm font-bold md:text-base">Creative Studio</p>
             </div>
 
-            <div className="space-y-3 text-xs md:text-sm">
+            <div className="space-y-3 text-xs md:max-w-xs md:text-sm">
             <p className="text-sm font-bold md:text-base">{studioInfo.company}</p>
             <dl className="space-y-3">
                 {studioInfo.addresses.map((item) => (
@@ -38,7 +38,7 @@ export function Footer() {
                         <Image
                             src={youtubepng}
                             alt="youtube"
-                            className="h-auto w-40"
+                            className="h-auto w-26"
                         />
                     </Link>
                 </li>
@@ -47,7 +47,7 @@ export function Footer() {
                         <Image
                             src={instagrampng}
                             alt="instagram"
-                            className="h-auto w-40"
+                            className="h-auto w-26"
                         />
                     </Link>
                 </li>
